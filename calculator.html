@@ -1,23 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script>
-  document.getElementById("1")
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="calculations.js"></script>
 </head>
 <body>
 
-<button id="1" type="button">1</button>
-<button id="2" type="button">2</button>
-<button id="3" type="button">3</button><br>
+<div class="container-fluid">
+<h2>Calculator</h2>
 
-<button id="4" type="button">4</button>
-<button id="5" type="button">5</button>
-<button id="6" type="button">6</button><br>
+<div class="resultScreen">
+  <span id="result"></span>
+</div>
 
-<button id="7" type="button">7</button>
-<button id="8" type="button">8</button>
-<button id="9" type="button">9</button><br>
+<button id="1" type="button" onclick="enterNumber(1)">1</button>
+<button id="2" type="button" onclick="enterNumber(2)">2</button>
+<button id="3" type="button" onclick="enterNumber(3)">3</button>
+<button class="operator" onclick="operationJoin('divide')">÷</button>
+<button id="cancel" type="button" onclick="cancel()">C</button><br>
+
+<button id="4" type="button" onclick="enterNumber(4)">4</button>
+<button id="5" type="button" onclick="enterNumber(5)">5</button>
+<button id="6" type="button" onclick="enterNumber(6)">6</button>
+<button class="operator" onclick="operationJoin('multiply')">x</button>
+<button id="back" type="button" onclick="backspace()">B</button><br>
+
+<button id="7" type="button" onclick="enterNumber(7)">7</button>
+<button id="8" type="button" onclick="enterNumber(8)">8</button>
+<button id="9" type="button" onclick="enterNumber(9)">9</button>
+<button class="operator" onclick="operationJoin('minus')">-</button><br>
+
+<button id="posNeg" type="button" onclick="enterPosNeg()">+/-</button>
+<button id="0" type="button" onclick="enterNumber(0)">0</button>
+<button id="decimal" type="button" onclick="enterDecimal()">.</button>
+<button class="operator" type="button" onclick="operationJoin('plus')">+</button>
+<button id="execute" type="button" onclick="execute()">=</button>
+
+<p id="testing"></p>
+<p id="testing2"></p>
+<p id = "length">length</p>
+<p id="symbol">symbol</p>
+<p id="tester"></p>
+</div>
 
 </body>
 </html>
