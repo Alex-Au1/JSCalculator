@@ -1,7 +1,7 @@
 //variable for the value of the first and second number
 var number1, number2;
 
-//variable for the operation used
+//variable for the operation usedcccccccc
 var operation;
 
 //variable to check if the number has a negative symbol
